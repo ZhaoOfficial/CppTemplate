@@ -94,6 +94,8 @@ int main() {
         std::unordered_set<Coding::Customer, CustomerOp, CustomerOp> set2;
 
         set1.emplace("first");
+        set1.emplace("first");
+        set2.emplace("second");
         set2.emplace("second");
         Coding::print(set1.cbegin()->getName(), set2.cbegin()->getName());
     }

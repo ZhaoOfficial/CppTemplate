@@ -104,12 +104,14 @@ namespace Coding {
 
     struct CustomerEq {
         bool operator()(Customer const& c1, Customer const& c2) const {
+            std::cout << "CustomerEq::operator() called.\n";
             return c1.getName() == c2.getName();
         }
     };
 
     struct CustomerHash {
         std::size_t operator()(Customer const& c) const {
+            std::cout << "CustomerHash::operator() called.\n";
             return std::hash<std::string>{}(c.getName());
         }
     };
